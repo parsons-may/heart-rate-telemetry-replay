@@ -1,0 +1,17 @@
+public class Reading {
+    String timestamp;
+    int bpm;
+
+    public Reading(String timestamp, int bpm) {
+        this.timestamp= timestamp;
+        this.bpm = bpm;
+    }
+
+    private String getTimeStamp() {
+        return timestamp;
+    }
+
+    private int getBpm() {
+        return bpm;
+    }
+}
