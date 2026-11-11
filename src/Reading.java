@@ -11,7 +11,7 @@ public class Reading {
         return timestamp;
     }
 
-    private int getBpm() {
+    public int getBpm() {
         return bpm;
     }
 }
