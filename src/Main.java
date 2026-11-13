@@ -15,7 +15,7 @@ public class Main {
         for(int i=1; i<lines.size(); i++) {
             String row = lines.get(i);
             String[] parts = row.split(",");
-            if(parts.length !=2) {
+            if(parts.length !=2 || parts[0].isBlank()) {
                 skippedRows++;
                 continue;
             }
