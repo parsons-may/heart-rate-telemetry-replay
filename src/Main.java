@@ -19,12 +19,18 @@ public class Main {
                 skippedRows++;
                 continue;
             }
-            int bpm = Integer.parseInt(parts[1]);
+            int bpm;
+            try {
+                bpm = Integer.parseInt(parts[1]);}
+                catch(NumberFormatException e) {
+                    skippedRows++;
+                    continue;
+                }
             Reading firstReading = new Reading(parts[0], bpm);
             sessionAnalyzer.addReading(firstReading);
             validReadings++;
-
             System.out.println(firstReading.getBpm());
+
         }
         System.out.println(sessionAnalyzer.averageBPM());
         System.out.println("Skipped rows: " + skippedRows);
