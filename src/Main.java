@@ -30,9 +30,12 @@ public class Main {
             sessionAnalyzer.addReading(firstReading);
             validReadings++;
             System.out.println(firstReading.getBpm());
-
         }
-        System.out.println(sessionAnalyzer.averageBPM());
+        if(validReadings == 0) {
+            System.out.println("Average BPM: N/A");
+        } else{
+            System.out.println(sessionAnalyzer.averageBPM());
+        }
         System.out.println("Skipped rows: " + skippedRows);
         System.out.println("Valid readings: " + validReadings);
     }
